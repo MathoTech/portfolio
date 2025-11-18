@@ -5,24 +5,24 @@ const introCards = [
     title: "Approche produit",
     icon: Sparkles,
     content:
-      "Je mixe discovery, design system et industrialisation pour livrer des expériences rapides et cohérentes. Ma force : relier les contraintes data, sécurité et delivery sans ralentir les équipes produit."
+      "Je mixe discovery, design system et industrialisation pour livrer des expériences rapides, pixel-perfect et cohérentes. Je suis obsédé par les détails UI : micro-interactions, typos et lumière doivent raconter quelque chose, quitte à passer des heures à polir une interface pour qu’elle soit aussi belle qu’efficace."
   },
   {
     title: "Énergie & passions",
     icon: Timer,
     content:
-      "Passionné par ma GSX-R 750 K6, j'applique la même précision au code : trajectoires maîtrisées, anticipation des risques et obsession pour la fiabilité, même à pleine vitesse."
+      "Trader amateur et passionné de cryptomonnaies, je décortique les marchés comme un backlog produit : analyse fine, gestion du risque et décisions rapides. Cette curiosité finance nourrit ma veille tech et ma capacité à concevoir des interfaces data-intensives lisibles et fiables."
   }
 ];
 
 const skillGroups = [
   {
     label: "Front-end",
-    items: ["Next.js", "React.js", "Vue.js", "Angular", "Astro", "Tailwind CSS"]
+    items: ["Next.js", "React.js", "Vue.js", "Angular", "Astro"]
   },
   {
     label: "Back-end",
-    items: ["Node.js", "Laravel PHP", "SpringBoot Java", "APIs REST/GraphQL"]
+    items: ["Node.js", "SpringBoot Java"]
   },
   {
     label: "Tooling & Ops",
@@ -30,7 +30,7 @@ const skillGroups = [
   },
   {
     label: "Data & Langues",
-    items: ["MongoDB", "French", "English", "Spanish (notions)"]
+    items: ["MongoDB", "French", "English"]
   }
 ];
 
@@ -70,7 +70,7 @@ const experiences = [
     ]
   },
   {
-    company: "Riots",
+    company: "<div>Riots",
     role: "Développeur Web",
     period: "2021 - 2022",
     stack: ["Astro", "React", "Vue.js", "Node.js"],
@@ -118,7 +118,7 @@ export default function AboutSection() {
             </p>
           </div>
           <a
-            href="/assets/thomas-lopez-cv.pdf"
+            href="/assets/THOMAS_LOPEZ_CV.pdf"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-iris to-accent-magenta px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:translate-y-[-2px]"
           >
             <ArrowDownToLine className="h-4 w-4" />

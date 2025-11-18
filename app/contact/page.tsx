@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const availability = [
   { icon: FaCode, label: "Projets web" },
   { icon: FaMobileAlt, label: "Applications mobiles" },
-  { icon: FaCogs, label: "Intégrations Salesforce" }
+  { icon: FaCogs, label: "Developpement logiciel" }
 ];
 
 export default function ContactPage() {
@@ -49,7 +49,7 @@ export default function ContactPage() {
             </ul>
             <div className="mt-6 flex gap-4">
               <a
-                href="https://www.linkedin.com/in/thomas-lopez-dev"
+                href="https://www.linkedin.com/in/matholopez"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-white/70 transition hover:border-accent-electric hover:text-accent-electric"
@@ -58,7 +58,7 @@ export default function ContactPage() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/thomaslopez-dev"
+                href="https://github.com/mathotech"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-white/70 transition hover:border-accent-electric hover:text-accent-electric"

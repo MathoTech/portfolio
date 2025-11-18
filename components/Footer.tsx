@@ -9,8 +9,8 @@ export default function Footer() {
             <p className="text-xs uppercase tracking-[0.45em] text-white/50">Thomas Lopez</p>
             <p className="mt-2 text-lg font-semibold">Matho Studio</p>
             <p className="mt-3 text-sm text-white/70">
-              Craft d&apos;applications web & data, livraisons sécurisées sur Kubernetes, intégrations
-              Salesforce et delivery produit complet.
+              Full stack engineer à forte appétence front : expériences React.js, Next.js, Angular, Vue.js et
+              plateformes data pensées pour être belles, performantes et maintenables.
             </p>
           </div>
           <div>
@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-white/50">Disponibilité</p>
             <p className="mt-4 text-sm text-white/75">
-              Projets web, applications mobiles, intégrations Salesforce & delivery data.
+              Projets web, applications mobiles, dashboards data et refontes UI pixel-perfect.
             </p>
             <p className="mt-3 text-sm font-semibold text-accent-electric">
               Créneaux ouverts dès maintenant.

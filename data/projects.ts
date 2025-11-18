@@ -27,160 +27,217 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "bouygues-command-center",
-    title: "Bouygues Command Center",
+    slug: "credit-du-nord-plateforme-rh",
+    title: "Plateforme RH Crédit du Nord",
     description:
-      "Pilotage Next.js d\u2019un centre de supervision fibre : UI temps r\u00e9el, synchronisation Salesforce, exports PowerBI.",
+      "Portail React pour fluidifier la gestion des congés, carrières et données employé des équipes Crédit du Nord.",
     longDescription:
-      "Refonte compl\u00e8te du centre de pilotage national Bouygues Telecom. L\u2019interface unifie les tickets fibre, la roadmap d\u2019intervention et un module analytique en temps r\u00e9el. Projet men\u00e9 en approche produit avec sprints courts et tests de charge.",
+      "Dans le cadre de la modernisation des outils RH, j’ai contribué à la création d’une application web interne permettant aux collaborateurs du Crédit du Nord (Société Générale) de suivre congés, historique de carrière et informations administratives. Le chantier visait une UI claire, des processus automatisés et une cohérence forte avec les back-ends existants.",
     image: "/assets/projects/project-01.jpg",
-    stack: ["Next.js 14", "TypeScript", "Tailwind", "Salesforce API", "PostgreSQL"],
+    stack: ["React", "JavaScript", "CSS", "REST API", "GitHub"],
     problem:
-      "Le cockpit existant \u00e9tait bloqu\u00e9 par des rapports statiques. Impossible de suivre les escalades clients ou de pr\u00e9voir la saturation r\u00e9seau.",
+      "Les équipes RH travaillaient sur plusieurs interfaces vieillissantes qui rendaient la gestion des demandes et mises à jour trop lente, avec des incohérences de données.",
     solution:
-      "Mise en place d\u2019un frontend Next.js composable, connect\u00e9 \u00e0 Salesforce et \u00e0 un entrep\u00f4t PostgreSQL. Les flux SSE assurent le suivi temps r\u00e9el, tandis que les filtres sauvegard\u00e9s sont pouss\u00e9s dans PowerBI pour l\u2019\u00e9quipe data.",
-    link: "https://www.bouyguestelecom.fr",
+      "Livraison d’un portail unifié React avec composants réutilisables, intégration aux API RH et validations front. Les équipes ont pu centraliser les workflows et réduire les retours manuels.",
     workflows: [
       {
-        name: "Hub d\u2019observabilit\u00e9",
-        description:
-          "Dashboard multi-tenant avec agr\u00e9gations pr\u00e9-calcul\u00e9es, autorisations RBAC et snapshots PDF programm\u00e9s.",
-        tech: ["Next.js Route Handlers", "tRPC", "BullMQ"]
+        name: "Portail congés & carrière",
+        description: "Création des écrans de suivi des congés, carrières et documents RH avec formulaires validés.",
+        tech: ["React hooks", "Form validation", "REST"]
       },
       {
-        name: "Synchronisation Salesforce",
+        name: "Bibliothèque UI interne",
         description:
-          "Connecteurs delta avec r\u00e9solution de conflits, replays en cas d\u2019\u00e9chec et monitoring Grafana.",
-        tech: ["Salesforce CDC", "Node Streams", "Grafana"]
+          "Développement de composants partagés (tableaux, cartes employé, modales) pour garantir cohérence et accessibilité.",
+        tech: ["Storybook", "CSS modules"]
       }
     ],
     demoMedia: [
       {
         type: "image",
         src: "/assets/projects/project-02.jpg",
-        title: "Vue \u00ab Incident Radar \u00bb",
-        description: "Heatmap r\u00e9seau coupl\u00e9e \u00e0 un module de dispatch automatis\u00e9."
+        title: "Dashboard RH",
+        description: "Vue synthétique des droits à congés et statuts RH."
       },
       {
         type: "image",
         src: "/assets/projects/project-03.jpg",
-        title: "Timeline d\u2019intervention",
-        description: "Composant timeline virtualis\u00e9 pour suivre 4 000 tickets/jour."
+        title: "Gestion des dossiers",
+        description: "Composant tableau permettant de filtrer et mettre à jour les dossiers employé."
       }
     ]
   },
   {
-    slug: "fixspec-connect",
-    title: "Fixspec Connect",
+    slug: "riots-ecosysteme-digital",
+    title: "Écosystème digital <div>Riots",
     description:
-      "Portail B2B Vue/Node migr\u00e9 vers Next.js : sandbox API financi\u00e8re, guidage IA et documentation interactive.",
+      "Sites Astro, blog markdown et application de ranking Vue.js pour valoriser les produits numériques <div>Riots.",
     longDescription:
-      "Fixspec cherchait \u00e0 fluidifier l\u2019onboarding des partenaires boursiers. J\u2019ai con\u00e7u un portail hybride Next.js + Edge Functions permettant de tester les webhooks en direct et d\u2019automatiser la validation des messages FIX.",
+      "Au sein de <div>Riots (Paris, full-remote), j’ai participé à plusieurs chantiers pour améliorer la visibilité de leurs offres : site vitrine statique performant, blog connecté à des contenus markdown et application de ranking d’articles avec analytics intégrés.",
     image: "/assets/projects/project-04.jpg",
-    stack: ["Next.js 14", "Edge Functions", "Redis", "Tailwind", "Playwright"],
+    stack: ["Astro", "Vue.js", "React", "Node.js", "Fathom Analytics"],
     problem:
-      "Les clients perdaient 3 semaines \u00e0 obtenir des acc\u00e8s et des jeux de donn\u00e9es de tests. Le backlog support explosait.",
+      "La marque disposait d’expériences disparates et difficilement mesurables. Les équipes marketing n’avaient ni vitrine performante ni outils de suivi.",
     solution:
-      "Industrialisation d\u2019un sandbox auto-provisionn\u00e9 avec scripts Edge, portail guid\u00e9 par IA (OpenAI Function Calling) et documentation interactive synchronis\u00e9e avec le sch\u00e9ma OpenAPI.",
+      "Construction d’un socle Astro optimisé SEO, d’un blog responsive et d’une app Vue.js reliée à Fathom Analytics et scripts Node de traitement. Les équipes marketing disposent désormais d’un flux de publication fiable et d’une visibilité data.",
     workflows: [
       {
-        name: "Sandbox FIX supervis\u00e9",
+        name: "Site vitrine Astro",
         description:
-          "Moteur de messages orchestr\u00e9 par Redis Streams avec r\u00e8gles de validation et snapshots exportables.",
-        tech: ["Redis Streams", "Prisma", "Next.js Server Actions"]
+          "Intégration pixel-perfect de la maquette, génération statique, optimisation Lighthouse et microdata SEO.",
+        tech: ["Astro", "MDX", "Tailwind"]
       },
       {
-        name: "Guidage IA",
+        name: "App de ranking",
         description:
-          "Assistant embarqu\u00e9 qui explique les erreurs FIX en langage naturel et g\u00e9n\u00e8re des snippets de correction.",
-        tech: ["OpenAI", "LangChain", "Zod"]
+          "Développement d’une UI tableau Vue.js avec filtres dynamiques, connexion à Fathom et agrégation Node avant rendu.",
+        tech: ["Vue.js", "Node.js", "Fathom Analytics"]
+      },
+      {
+        name: "Blog markdown",
+        description:
+          "Parsing markdown, génération de routes statiques et intégration d’un back-office minimal pour publier le contenu marketing.",
+        tech: ["Content collections", "Markdown", "React components"]
       }
     ],
     demoMedia: [
       {
         type: "image",
         src: "/assets/projects/project-05.jpg",
-        title: "Console sandbox",
-        description: "Vue terminal + timeline pour rejouer les messages d\u00e9faillants."
+        title: "Blog <div>Riots",
+        description: "Listing responsive alimenté par des fichiers markdown versionnés."
       }
     ]
   },
   {
-    slug: "astrelya-salesforce-kit",
-    title: "Astrelya Salesforce Kit",
+    slug: "astrelya-plateforme-candidats",
+    title: "Plateforme candidats Astrelya",
     description:
-      "Kit d\u2019int\u00e9gration Salesforce + Next.js pour les squads consulting : biblioth\u00e8que UI, scripts CLI et monitoring.",
+      "Refonte Angular/Java d’un outil de gestion candidats avec UI modulaire et modules analytiques.",
     longDescription:
-      "Pour acc\u00e9l\u00e9rer les missions Astrelya, j\u2019ai livr\u00e9 un starter Next.js opinion\u00e9 : authentification Salesforce, dashboards configurables et pipeline CI/CD GitHub Actions + Vercel.",
+      "Astrelya souhaitait moderniser sa plateforme stratégique pour les équipes recrutement. J’ai audité l’ancienne version puis développé une nouvelle interface Angular, modulable et accessible, tout en ajoutant des fonctionnalités côté Java/Spring pour enrichir les interactions métier.",
     image: "/assets/projects/project-06.jpg",
-    stack: ["Next.js 14", "Salesforce", "Tailwind", "GitHub Actions", "Cypress"],
+    stack: ["Angular", "TypeScript", "Java", "Spring Boot", "SCSS"],
     problem:
-      "Chaque squad recr\u00e9ait la m\u00eame fondation front, avec des divergences de qualit\u00e9 et peu de tests end-to-end.",
+      "L’interface historique limitait la manipulation des données candidats et ne respectait plus les standards UX attendus.",
     solution:
-      "Unifier les patterns d\u2019int\u00e9gration via un kit modulable : composants UI compatibles Lightning, scripts CLI pour provisionner les sandboxes et pipeline QA automatis\u00e9.",
-    link: "https://www.astrelya.com",
+      "Conception d’une UI fluide et modulaire, ajout de filtres dynamiques, statistiques et validations front, puis contribution aux nouvelles APIs côté Spring pour prolonger les scénarios métiers.",
     workflows: [
       {
-        name: "CLI dx-kit",
+        name: "Tableaux interactifs",
         description:
-          "Commande Node qui cr\u00e9e les Connected Apps, configure les secrets Vercel et installe les flows MuleSoft requis.",
-        tech: ["oclif", "Salesforce DX", "Vercel API"]
+          "Tables virtualisées et filtres multi-critères pour explorer rapidement les profils et pipelines de recrutement.",
+        tech: ["Angular CDK", "RxJS"]
       },
       {
-        name: "Design System Neon",
+        name: "Visualisations candidates",
         description:
-          "Palette sombre avec tokens Tailwind custom, composants accessibles et variantes Motion One.",
-        tech: ["Tailwind CSS", "Radix UI", "Motion One"]
+          "Graphiques et cartes synthétiques pour aider les RH à interpréter les données et prendre des décisions.",
+        tech: ["Chart.js", "Angular components"]
+      },
+      {
+        name: "Back-end métier",
+        description:
+          "Contribution aux endpoints Spring pour gérer les nouvelles fonctionnalités et validations côté serveur.",
+        tech: ["Spring Boot", "Hibernate"]
       }
     ],
     demoMedia: [
       {
         type: "image",
         src: "/assets/projects/project-03.jpg",
-        title: "Command Center KPI",
-        description: "Tableau widget\u00e9 synchronis\u00e9 avec Salesforce Analytics."
-      },
-      {
-        type: "video",
-        src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        title: "Pipeline CI/CD",
-        description: "Capture montrant les checks automatiques Cypress + Lighthouse."
+        title: "Vue pipeline",
+        description: "Timeline des candidats et modules de statistiques embarqués."
       }
     ]
   },
   {
-    slug: "riots-clubhouse",
-    title: "Riots Clubhouse",
+    slug: "fixspec-market-navigator",
+    title: "FixSpec Market Navigator",
     description:
-      "Exp\u00e9rience communautaire pour riders : scoring des sorties GSX-R, carnet de trajectoires et challenges WebXR.",
+      "Application Vue.js pour explorer horaires de marchés, instruments accessibles et contacts clés.",
     longDescription:
-      "Projet passion men\u00e9 avec la communaut\u00e9 Riots : un espace pour partager les setups de GSX-R 750 K6, suivre ses temps sur piste et t\u00e9l\u00e9charger des pr\u00e9sets d\u2019amortisseurs. Bas\u00e9 sur Next.js et un moteur 3D l\u00e9ger.",
+      "Chez FixSpec (Londres, remote), j’ai conçu une application informative dédiée aux acteurs des marchés financiers. L’objectif : proposer un navigateur ergonomique listant les places boursières, leurs horaires, les instruments disponibles et les contacts associés, le tout avec un design sur mesure construit sans librairie UI.",
     image: "/assets/projects/project-02.jpg",
-    stack: ["Next.js 14", "Three.js", "Supabase", "Tailwind", "Cloudinary"],
+    stack: ["Vue.js", "JavaScript", "Laravel", "REST API", "GitLab"],
     problem:
-      "Les riders utilisaient des Google Sheets dispers\u00e9s pour enregistrer les sessions. Aucune vue centralis\u00e9e ni storytelling.",
+      "Les interlocuteurs avaient besoin d’un outil simple pour naviguer entre zones géographiques et comprendre les contraintes de trading, mais aucun produit existant ne couvrait ce besoin pédagogique.",
     solution:
-      "Construction d\u2019un espace communautaire : authentification Supabase, feed en temps r\u00e9el des sorties, carnet visuel des trajectoires et comparateur de setup GSX-R K6.",
+      "Développement d’une UI responsive en Vue.js, intégration d’APIs financières Laravel/PHP, création d’un composant complexe d’horaires de sessions et d’un routage multi-zones pour contextualiser les données.",
     workflows: [
       {
-        name: "Replay 3D",
+        name: "Cartographie marchés",
         description:
-          "Reconstruction des trajectoires via import .gpx et rendu WebGL interactif avec overlays t\u00e9l\u00e9m\u00e9trie.",
-        tech: ["Three.js", "zustand", "Supabase Realtime"]
+          "Interface multi-onglets pour passer d’une zone à l’autre avec affichage des instruments, contacts et zones horaires.",
+        tech: ["Vue Router", "Pinia"]
       },
       {
-        name: "Badges communautaires",
+        name: "Composant horaires",
         description:
-          "Syst\u00e8me de qu\u00eates gamifi\u00e9 (night ride, track day, r\u00e9glages suspensions) avec webhooks Discord.",
-        tech: ["Supabase Functions", "Discord Webhooks"]
+          "Widget sur-mesure listant les différentes sessions de trading avec conversions automatiques de fuseaux.",
+        tech: ["Date-fns", "SVG custom"]
+      },
+      {
+        name: "Intégration API",
+        description:
+          "Connexion aux endpoints Laravel et traitement des données avant affichage pour assurer cohérence et performance.",
+        tech: ["Axios", "Laravel", "PHP"]
       }
     ],
     demoMedia: [
       {
         type: "image",
         src: "/assets/projects/project-01.jpg",
-        title: "Comparateur GSX-R",
-        description: "Module pour juxtaposer deux pr\u00e9sets suspensions."
+        title: "Navigator multi-zones",
+        description: "Écran présentant les marchés par région et sessions de trading associées."
+      }
+    ]
+  },
+  {
+    slug: "bouygues-medias-design-system",
+    title: "Bouygues Telecom : médiathèque & Design System",
+    description:
+      "Deux applications Next.js : nouvelle médiathèque interne et documentation interactive du design system.",
+    longDescription:
+      "Bouygues Telecom m’a confié la refonte complète de sa médiathèque interne et la création d’une documentation interactive pour le design system. Ces outils devaient harmoniser la production d’interfaces, fiabiliser les contenus médias et s’intégrer dans l’écosystème Docker/Kubernetes de l’entreprise.",
+    image: "/assets/projects/project-05.jpg",
+    stack: ["Next.js 14", "TypeScript", "Node.js", "Docker", "Kubernetes", "Directus"],
+    problem:
+      "L’ancienne médiathèque était lente, difficile à maintenir et aucun support n’existait pour la nouvelle version du design system.",
+    solution:
+      "Création from scratch d’une application Next.js performante, migration automatisée des contenus et conception d’une documentation interactive avec sandbox intégré. Les équipes disposent désormais d’outils fiables, documentés et alignés sur le design system.",
+    workflows: [
+      {
+        name: "Médiathèque Next.js",
+        description:
+          "Développement de l’interface, gestion des assets via Directus et optimisation des performances de rendu.",
+        tech: ["Next.js App Router", "Directus SDK", "Tailwind"]
+      },
+      {
+        name: "Scripts de migration",
+        description:
+          "Extraction des contenus, transformation et import automatique dans la nouvelle base avec contrôle d’intégrité.",
+        tech: ["Node.js", "CLI personnalisés", "CI/CD GitLab"]
+      },
+      {
+        name: "Documentation Design System",
+        description:
+          "Site interactif avec sandbox pour tester les composants, exemples live et intégration CI/CD Docker/Kubernetes.",
+        tech: ["MDX", "Next.js", "Docker", "Kubernetes"]
+      }
+    ],
+    demoMedia: [
+      {
+        type: "image",
+        src: "/assets/projects/project-02.jpg",
+        title: "Sandbox DS",
+        description: "Interface montrant les composants en situation réelle."
+      },
+      {
+        type: "image",
+        src: "/assets/projects/project-04.jpg",
+        title: "Médiathèque",
+        description: "Vue des assets avec filtres et recherche instantanée."
       }
     ]
   }

@@ -7,7 +7,7 @@ const stats = [
   { label: "Langues", value: "FR / EN" }
 ];
 
-const focus = ["React.js", "Next.js", "Vue.js", "Node.js", "TypeScript/Jvascript"];
+const focus = ["React.js", "Vue.js", "Node.js", "TS/JS"];
 
 export default function Hero() {
   return (
