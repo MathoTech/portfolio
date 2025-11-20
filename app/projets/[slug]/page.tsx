@@ -105,43 +105,6 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
       )}
 
-      {project.demoMedia && project.demoMedia.length > 0 && (
-        <section className="rounded-[36px] border border-white/10 bg-white/5 p-8">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/50">Aperçus</p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {project.demoMedia.map((media) => (
-              <div
-                key={media.src}
-                className="space-y-4 rounded-[26px] border border-white/10 bg-black/25 p-4 text-sm text-white/70"
-              >
-                <div className="relative w-full overflow-hidden rounded-2xl border border-white/10">
-                  {media.type === "image" ? (
-                    <div className="relative h-56 w-full">
-                      <Image
-                        src={media.src}
-                        alt={media.title || project.title}
-                        fill
-                        sizes="(min-width: 1024px) 40vw, 100vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <iframe
-                      src={media.src}
-                      title={media.title || "Video"}
-                      className="h-56 w-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  )}
-                </div>
-                {media.title && <h3 className="text-lg font-semibold text-white">{media.title}</h3>}
-                {media.description && <p>{media.description}</p>}
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
     </article>
   );
 }
