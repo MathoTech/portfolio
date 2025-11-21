@@ -102,7 +102,7 @@ export async function sendContact(
       from: CONTACT_FROM,
       to: CONTACT_TO,
       subject,
-      replyTo: [{ email, name }],
+      replyTo: `${name} <${email}>`,
       text: [subject, "", `Nom: ${name}`, `Email: ${email}`, "", message].join("\n"),
       html
     });
